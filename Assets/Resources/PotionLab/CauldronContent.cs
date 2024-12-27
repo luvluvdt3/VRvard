@@ -175,6 +175,7 @@ public class CauldronContent : MonoBehaviour
 
     public void Open()
     {
+        Debug.Log("Open");
         CauldronAnimator.SetTrigger("Open");
         m_CanBrew = true;
         AmbientSoundSource.volume = m_StartingVolume;
