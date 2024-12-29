@@ -8,8 +8,11 @@ public class OpenCauldron : MonoBehaviour
 
     void OnCollisionEnter(Collision other)
     {
+        Debug.Log("Collision detected with " + other.gameObject.name);
         OnMagicCollision.Invoke();
         if (DestroyedOnTriggered)
             Destroy(this); 
     }
+
+    
 }
