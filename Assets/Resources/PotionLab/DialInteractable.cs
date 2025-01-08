@@ -76,6 +76,8 @@ public class DialInteractable : XRBaseInteractable
         
         if (Steps > 0) m_StepSize = RotationAngleMaximum / Steps;
         else m_StepSize = 0.0f;
+
+        Debug.Log($"LocalRotationAxis: {LocalRotationAxis}, LocalAxisStart: {LocalAxisStart}");
     }
 
     public override void ProcessInteractable(XRInteractionUpdateOrder.UpdatePhase updatePhase)
@@ -94,7 +96,7 @@ public class DialInteractable : XRBaseInteractable
                 
                 if (DialType == InteractionType.ControllerRotation)
                 {
-                    Quaternion difference = m_GrabbingInteractor.transform.rotation * Quaternion.Inverse(m_GrabbedRotation);
+                    Quaternion difference = GetAttachTransform(m_GrabbingInteractor).rotation * Quaternion.Inverse(m_GrabbedRotation);
 
                     newRight = difference * worldAxisStart;
 
@@ -102,10 +104,11 @@ public class DialInteractable : XRBaseInteractable
                     angle = Vector3.SignedAngle(m_StartingWorldAxis, newRight, worldRotationAxis);
 
                     if (angle < 0) angle = 360 + angle;
+                    Debug.Log("Dial Type: " + DialType + " Angle: " + angle + " CurrentAngle: " + m_CurrentAngle);
                 }
                 else
                 {
-                    Vector3 centerToController = m_GrabbingInteractor.transform.position - transform.position;
+                    Vector3 centerToController = GetAttachTransform(m_GrabbingInteractor).position - transform.position;
                     centerToController.Normalize();
 
                     newRight = centerToController;
@@ -113,6 +116,7 @@ public class DialInteractable : XRBaseInteractable
                     angle = Vector3.SignedAngle(m_StartingWorldAxis, newRight, worldRotationAxis);
                     
                     if (angle < 0) angle = 360 + angle;
+                    Debug.Log("Dial Type: " + DialType + " Angle: " + angle + " CurrentAngle: " + m_CurrentAngle);
                 }
 
                 //if the angle is < 0 or > to the max rotation, we clamp but TO THE CLOSEST (a simple clamp would clamp
@@ -168,7 +172,7 @@ public class DialInteractable : XRBaseInteractable
                 
                 m_SyncTransform.transform.rotation = newRot;
 
-                m_GrabbedRotation = m_GrabbingInteractor.transform.rotation;
+                m_GrabbedRotation = GetAttachTransform(m_GrabbingInteractor).rotation;
             }
         }
     }
@@ -176,7 +180,7 @@ public class DialInteractable : XRBaseInteractable
     protected override void OnSelectEntered(SelectEnterEventArgs args)
     {
         var interactor = args.interactorObject;
-        m_GrabbedRotation = interactor.transform.rotation;
+        m_GrabbedRotation = GetAttachTransform(interactor).rotation;
         m_GrabbingInteractor = interactor;
 
         //create an object that will track the rotation
@@ -193,7 +197,8 @@ public class DialInteractable : XRBaseInteractable
             m_SyncTransform.rotation = transform.rotation;
             m_SyncTransform.position = transform.position;
         }
-        
+
+        Debug.Log($"Interactor Assigned: {m_GrabbingInteractor}, Initial Rotation: {m_GrabbedRotation}");
         base.OnSelectEntered(args);
     }
 
