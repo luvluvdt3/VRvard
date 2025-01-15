@@ -38,33 +38,33 @@ public class CauldronEffects : MonoBehaviour
         m_MeshRenderer.SetPropertyBlock(m_Block);
     }
 
-    public void SetRotationSpeed(int step)
+    public void SetRotationSpeed(float step)
     {
         if (step == -1)
         {
             Speed = -0.4f;
-            m_BubbleEffect.SetInt(m_SpinDirectionID, -1);
+            m_BubbleEffect.SetFloat(m_SpinDirectionID, -1);
             m_BubbleEffect.SetFloat(m_SpinIntensityID, 0.75f);
         }
         else if (step == 0)
         {
             Speed = 0.0f;
-            m_BubbleEffect.SetInt(m_SpinDirectionID, -1);
+            m_BubbleEffect.SetFloat(m_SpinDirectionID, -1);
             m_BubbleEffect.SetFloat(m_SpinIntensityID, 0.3f);
         }
         else if (step == 1)
         {
             Speed = 0.4f;
-            m_BubbleEffect.SetInt(m_SpinDirectionID, 1);
+            m_BubbleEffect.SetFloat(m_SpinDirectionID, 1);
             m_BubbleEffect.SetFloat(m_SpinIntensityID, 0.75f);
         }
 
     }
 
-    public void SetBubbleIntensity(int intensityStep)
+    public void SetBubbleIntensity(float intensityStep)
     {
-        int bubbleIntensity = intensityStep * 3;
-        m_BubbleEffect.SetInt(m_BubbleSpawnAmountID, bubbleIntensity);
+        float bubbleIntensity = intensityStep * 3;
+        m_BubbleEffect.SetFloat(m_BubbleSpawnAmountID, bubbleIntensity);
     }
 
     void Update()

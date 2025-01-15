@@ -16,15 +16,15 @@ public class CauldronContent : MonoBehaviour
     {
         public string name;
         public string[] ingredients;
-        public int temperature;
-        public int rotation;
+        public float temperature;
+        public float rotation;
     }
 
     [System.Serializable]
     public class BrewEvent : UnityEvent<Recipe> { };
 
     public Recipe[] Recipes;
-    public int TemperatureIncrement;
+    public float TemperatureIncrement;
 
     [Header("Effects")]
     public GameObject SplashEffect;
@@ -46,8 +46,8 @@ public class CauldronContent : MonoBehaviour
     bool m_CanBrew = false;
 
     List<string> m_CurrentIngredientsIn = new List<string>();
-    int m_Temperature = 0;
-    int m_Rotation = -1;
+    float m_Temperature = 0;
+    float m_Rotation = -1;
 
     float m_StartingVolume;
 
@@ -103,14 +103,14 @@ public class CauldronContent : MonoBehaviour
         }
     }
 
-    public void ChangeTemperature(int step)
+    public void ChangeTemperature(float step)
     {
         Debug.Log("ChangeTemp" + step);
         m_Temperature = TemperatureIncrement * step;
         m_CauldronEffect.SetBubbleIntensity(step);
     }
 
-    public void ChangeRotation(int step)
+    public void ChangeRotation(float step)
     {
         m_Rotation = step - 1;
         m_CauldronEffect.SetRotationSpeed(m_Rotation);
@@ -131,7 +131,7 @@ public class CauldronContent : MonoBehaviour
                 continue;
 
             List<string> copyOfIngredient = new List<string>(m_CurrentIngredientsIn);
-            int ingredientCount = 0;
+            float ingredientCount = 0;
             foreach (var ing in recipe.ingredients)
             {
                 if (copyOfIngredient.Contains(ing))
