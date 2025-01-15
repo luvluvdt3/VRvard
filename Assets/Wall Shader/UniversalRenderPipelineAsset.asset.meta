@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: f2d2a56cc59002b4cb7818016de97c26
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 216147
+  packageName: Wall Shader x-ray
+  packageVersion: 1.0
+  assetPath: Assets/Wall Shader/UniversalRenderPipelineAsset.asset
+  uploadId: 488728
