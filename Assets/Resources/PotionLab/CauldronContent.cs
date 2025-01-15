@@ -105,6 +105,7 @@ public class CauldronContent : MonoBehaviour
 
     public void ChangeTemperature(int step)
     {
+        Debug.Log("ChangeTemp" + step);
         m_Temperature = TemperatureIncrement * step;
         m_CauldronEffect.SetBubbleIntensity(step);
     }
