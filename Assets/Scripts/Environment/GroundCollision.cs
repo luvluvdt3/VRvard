@@ -1,17 +1,20 @@
 using UnityEngine;
 
-public class GroundCollision : MonoBehaviour
+namespace Environment
 {
-    [SerializeField] private ParticleSystem dustParticles;
-    
-    private void OnCollisionEnter(Collision other)
+    public class GroundCollision : MonoBehaviour
     {
-        if (!other.gameObject.CompareTag("Player"))
+        [SerializeField] private ParticleSystem dustParticles;
+    
+        private void OnCollisionEnter(Collision other)
         {
-            return;
-        }
+            if (!other.gameObject.CompareTag("Player"))
+            {
+                return;
+            }
         
-        dustParticles.transform.position = other.GetContact(0).point;
-        dustParticles.Play();
+            dustParticles.transform.position = other.GetContact(0).point;
+            dustParticles.Play();
+        }
     }
 }
