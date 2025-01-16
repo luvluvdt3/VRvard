@@ -16,7 +16,7 @@ public class CauldronEffects : MonoBehaviour
     VisualEffect m_BubbleEffect;
     int m_SpeedModID, m_SpinDirectionID, m_SpinIntensityID, m_BubbleSpawnAmountID;
 
-    private void Start()
+    private void Awake()
     {
         m_BubbleEffect = GetComponent<VisualEffect>();
     }
