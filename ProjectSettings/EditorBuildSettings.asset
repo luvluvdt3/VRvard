@@ -11,9 +11,12 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Samples/XR Interaction Toolkit/3.0.7/Starter Assets/DemoScene.unity
     guid: 319dafa5c80f29f428dc1e0d03f04177
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/PotionLab.unity
     guid: 7ee94e63bb85c1140a396ec28ec68655
+  - enabled: 1
+    path: Assets/Scenes/PrefabsScene.unity
+    guid: b63835ef700e6ab42b43d6842de9dd2c
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 80c0bcc51163f4b42806da0ec6356877, type: 2}
