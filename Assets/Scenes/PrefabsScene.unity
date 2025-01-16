@@ -25360,7 +25360,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2480842143515675104, guid: 20dbffb551d301c4c950be5615a9124c, type: 3}
       propertyPath: near clip plane
-      value: 5.36
+      value: 6.62
       objectReference: {fileID: 0}
     - target: {fileID: 2480842143515675104, guid: 20dbffb551d301c4c950be5615a9124c, type: 3}
       propertyPath: m_CullingMask.m_Bits
@@ -25372,15 +25372,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2904815113517342765, guid: 20dbffb551d301c4c950be5615a9124c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2
+      value: 1.44
       objectReference: {fileID: 0}
     - target: {fileID: 2904815113517342765, guid: 20dbffb551d301c4c950be5615a9124c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -116.7
+      value: -143.5
       objectReference: {fileID: 0}
     - target: {fileID: 2904815113517342765, guid: 20dbffb551d301c4c950be5615a9124c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.06
+      value: 0.17
       objectReference: {fileID: 0}
     - target: {fileID: 2904815113517342765, guid: 20dbffb551d301c4c950be5615a9124c, type: 3}
       propertyPath: m_LocalRotation.w
