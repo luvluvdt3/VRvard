@@ -116,8 +116,13 @@ public class CauldronContent : MonoBehaviour
 
     public void ChangeRotation(float step)
     {
-        m_Rotation = step - 1;
+        // step would be 0 or 0.5 or 1 but we want 0 1 2
+        m_Rotation = step * 2;
+        Debug.Log("ChangeRotation" + (int)m_Rotation);
         m_CauldronEffect.SetRotationSpeed((int)m_Rotation);
+
+        // m_Rotation = step - 1;
+        // m_CauldronEffect.SetRotationSpeed((int)m_Rotation);
     }
 
     public void Brew()

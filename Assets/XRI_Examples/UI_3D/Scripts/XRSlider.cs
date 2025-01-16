@@ -7,7 +7,7 @@ using UnityEngine.XR.Interaction.Toolkit.Interactables;
 namespace UnityEngine.XR.Content.Interaction
 {
     /// <summary>
-    /// An interactable that follows the position of the interactor on a single axis
+    /// An interactable that follows the position of the interactor on a single axis with optional stepped values
     /// </summary>
     public class XRSlider : XRBaseInteractable
     {
@@ -32,6 +32,10 @@ namespace UnityEngine.XR.Content.Interaction
         float m_MinPosition = -0.5f;
 
         [SerializeField]
+        [Tooltip("Number of steps for the slider (0 for continuous)")]
+        int m_Steps = 0;
+
+        [SerializeField]
         [Tooltip("Events to trigger when the slider is moved")]
         ValueChangeEvent m_OnValueChange = new ValueChangeEvent();
 
@@ -48,6 +52,15 @@ namespace UnityEngine.XR.Content.Interaction
                 SetValue(value);
                 SetSliderPosition(value);
             }
+        }
+
+        /// <summary>
+        /// Number of discrete steps for the slider (0 for continuous movement)
+        /// </summary>
+        public int steps
+        {
+            get => m_Steps;
+            set => m_Steps = Mathf.Max(0, value);
         }
 
         /// <summary>
@@ -103,9 +116,18 @@ namespace UnityEngine.XR.Content.Interaction
         {
             // Put anchor position into slider space
             var localPosition = transform.InverseTransformPoint(m_Interactor.GetAttachTransform(this).position);
-            var sliderValue = Mathf.Clamp01((localPosition.z - m_MinPosition) / (m_MaxPosition - m_MinPosition));
-            SetValue(sliderValue);
-            SetSliderPosition(sliderValue);
+            var rawValue = Mathf.Clamp01((localPosition.z - m_MinPosition) / (m_MaxPosition - m_MinPosition));
+            
+            // Apply stepping if steps are defined
+            float steppedValue = rawValue;
+            if (m_Steps > 0)
+            {
+                float stepSize = 1f / m_Steps;
+                steppedValue = Mathf.Round(rawValue / stepSize) * stepSize;
+            }
+
+            SetValue(steppedValue);
+            SetSliderPosition(steppedValue);
         }
 
         void SetSliderPosition(float value)
@@ -131,10 +153,23 @@ namespace UnityEngine.XR.Content.Interaction
 
             Gizmos.color = Color.green;
             Gizmos.DrawLine(sliderMinPoint, sliderMaxPoint);
+
+            // Draw step markers if steps are defined
+            if (m_Steps > 0)
+            {
+                Gizmos.color = Color.yellow;
+                for (int i = 0; i <= m_Steps; i++)
+                {
+                    float stepPosition = Mathf.Lerp(m_MinPosition, m_MaxPosition, (float)i / m_Steps);
+                    var stepPoint = transform.TransformPoint(new Vector3(0.0f, 0.0f, stepPosition));
+                    Gizmos.DrawSphere(stepPoint, 0.005f);
+                }
+            }
         }
 
         void OnValidate()
         {
+            m_Steps = Mathf.Max(0, m_Steps);
             SetSliderPosition(m_Value);
         }
     }
