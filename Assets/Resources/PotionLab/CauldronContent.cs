@@ -55,11 +55,15 @@ public class CauldronContent : MonoBehaviour
 
     private void Start()
     {
-        m_CauldronEffect = GetComponent<CauldronEffects>();
         splashVFX = SplashEffect.GetComponent<VisualEffect>();
 
         m_StartingVolume = AmbientSoundSource.volume;
         AmbientSoundSource.volume = m_StartingVolume * 0.2f;
+    }
+
+    private void Awake()
+    {
+        m_CauldronEffect = GetComponent<CauldronEffects>();
     }
 
     void OnTriggerEnter(Collider other)
@@ -105,15 +109,15 @@ public class CauldronContent : MonoBehaviour
 
     public void ChangeTemperature(float step)
     {
-        Debug.Log("ChangeTemp" + step);
-        m_Temperature = TemperatureIncrement * step;
-        m_CauldronEffect.SetBubbleIntensity(step);
+        Debug.Log("ChangeTemp" + step*105);
+        m_Temperature = TemperatureIncrement * step * 105;
+        m_CauldronEffect.SetBubbleIntensity((int)step);
     }
 
     public void ChangeRotation(float step)
     {
         m_Rotation = step - 1;
-        m_CauldronEffect.SetRotationSpeed(m_Rotation);
+        m_CauldronEffect.SetRotationSpeed((int)m_Rotation);
     }
 
     public void Brew()
