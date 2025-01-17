@@ -452,6 +452,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "CustomMenuButton",
+                    "type": "Button",
+                    "id": "d35f4ce6-e8e0-4bdb-8bb6-20d04446353e",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -861,6 +870,17 @@
                     "action": "Thumbstick",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "893cd696-135c-4bd3-a724-6706aa12caa5",
+                    "path": "<XRController>{LeftHand}/{MenuButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "CustomMenuButton",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         },
@@ -975,15 +995,6 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
-                },
-                {
-                    "name": "CustomMenuButton",
-                    "type": "Button",
-                    "id": "d32c8102-b8e1-45b3-87fe-aa968bc33d6d",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -1270,17 +1281,6 @@
                     "processors": "ScaleVector2(x=0),StickDeadzone",
                     "groups": "",
                     "action": "Translate Manipulation",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "027c6d4e-9188-407f-83e9-76619b6023c3",
-                    "path": "<QuestTouchPlusController>{LeftHand}/menu",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "CustomMenuButton",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

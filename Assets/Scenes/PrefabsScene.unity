@@ -8055,11 +8055,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e06785a3687687d459e1c7bb2ba541c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  customButton: {fileID: -7019669786680457028, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   numberOfRadialPart: 3
   radialPartPrefab: {fileID: 4788462597838610737, guid: d005037ccaa1d934995f7f16f061e4b1, type: 3}
   radialPartCanvas: {fileID: 50336675}
   angleBetweenPart: 10
   handTransform: {fileID: 604526305}
+  OnPartSelected:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &124547785
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,10 +1,12 @@
+using System;
 using System.Collections.Generic;
-using Unity.VisualScripting;
+using UnityEngine.InputSystem;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
 public class RadialSelection : MonoBehaviour
 {
+    public InputActionReference customButton;
     [Range(2, 10)] public int numberOfRadialPart;
     public GameObject radialPartPrefab;
     public Transform radialPartCanvas;
@@ -13,18 +15,44 @@ public class RadialSelection : MonoBehaviour
     
     public UnityEvent<int> OnPartSelected;
     
-    
+    private bool isPressed = false;
     private List<GameObject> spawnedParts = new List<GameObject>();
     private int currentSelectedRadialPart = -1;
+    void Start()
+    {
+        customButton.action.started += ButtonWasPressed;
+        customButton.action.canceled += ButtonWasReleased;
+    }
+    
     void Update()
     {
-
+        if (isPressed)
+        {
+            GetSelecteRadialPart();
+        }
     }
+    
+    private void ButtonWasPressed(InputAction.CallbackContext obj)
+    {
+        Debug.Log("Button was pressed");
+        radialPartCanvas.gameObject.SetActive(true);
+        SpawnRadialParts();
+        isPressed = true;
+    }
+    
+    private void ButtonWasReleased(InputAction.CallbackContext obj)
+    {
+        Debug.Log("Button was released");
+        HideAndTriggerSelected();
+    }
+
+
 
     public void HideAndTriggerSelected()
     {
         OnPartSelected.Invoke(currentSelectedRadialPart);
         radialPartCanvas.gameObject.SetActive(false);
+        isPressed = false;
     }
 
     public void GetSelecteRadialPart()
@@ -54,6 +82,9 @@ public class RadialSelection : MonoBehaviour
     
     public void SpawnRadialParts()
     {
+        radialPartCanvas.gameObject.SetActive(true);
+        radialPartCanvas.position = handTransform.position;
+        radialPartCanvas.rotation = handTransform.rotation;
         foreach (var part in spawnedParts)
         {
             Destroy(part);
