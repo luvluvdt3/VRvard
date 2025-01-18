@@ -11,7 +11,7 @@ public class PanelManager : MonoBehaviour {
 	private int m_OpenParameterId;
 	private Animator m_Open;
 	private GameObject m_PreviouslySelected;
-
+	
 	const string k_OpenTransitionName = "Open";
 	const string k_ClosedStateName = "Closed";
 
@@ -93,4 +93,15 @@ public class PanelManager : MonoBehaviour {
 	{
 		EventSystem.current.SetSelectedGameObject(go);
 	}
+	
+	public void Quit ()
+	{
+		Application.Quit();
+	}
+	
+	public void MovePlayer(GameObject player, Vector3 destination)
+	{
+		
+	}
+	
 }
