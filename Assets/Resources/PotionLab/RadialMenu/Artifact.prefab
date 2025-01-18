@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 746274954612994662}
   - component: {fileID: 8523273421346100135}
   m_Layer: 5
-  m_Name: Drag Box
+  m_Name: Artifact
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -137,7 +137,7 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 0}
+  m_TargetGraphic: {fileID: 7757697854276753618}
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
@@ -153,7 +153,7 @@ GameObject:
   - component: {fileID: 4247817429627238704}
   - component: {fileID: 8246375261063289880}
   m_Layer: 5
-  m_Name: Drag Image
+  m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
