@@ -69,7 +69,16 @@ public class PrefabSpawner : MonoBehaviour
 
     public void OnPrefabButtonClicked(PrefabData data, Vector3 position)
     {
-        Instantiate(data.prefabToSpawn, position, Quaternion.identity);
+        Quaternion rotation = Camera.main.transform.rotation!=null ? Camera.main.transform.rotation : Quaternion.identity;
+        Instantiate(data.prefabToSpawn, position, rotation);
         data.onSelected?.Invoke();
+    }
+    
+    public void AddPrefabData(PrefabData data)
+    {
+        if (data != null && prefabDataList != null)
+        {
+            prefabDataList[prefabDataList.Length] = data;
+        }
     }
 }
