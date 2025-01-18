@@ -111,18 +111,19 @@ public class PanelManager : MonoBehaviour {
 	
 	IEnumerator MovePlayerCoroutine(GameObject player, Vector3 destination, Quaternion rotation)
 	{
+		float duration = 3f; 
 		float time = 0;
 		Vector3 startPosition = player.transform.position;
 		Quaternion startRotation = player.transform.rotation;
-		while (time < 3)
+
+		while (time < duration)
 		{
-			player.transform.position = Vector3.Lerp(startPosition, destination, time);
-			player.transform.rotation = Quaternion.Lerp(startRotation, rotation, time);
+			player.transform.position = Vector3.Lerp(startPosition, destination, time / duration);
+			player.transform.rotation = Quaternion.Lerp(startRotation, rotation, time / duration);
 			time += Time.deltaTime;
 			yield return null;
 		}
 		player.transform.position = destination;
 		player.transform.rotation = rotation;
 	}
-	
 }
