@@ -111,7 +111,7 @@ public class PanelManager : MonoBehaviour {
 	
 	IEnumerator MovePlayerCoroutine(GameObject player, Vector3 destination, Quaternion rotation)
 	{
-		float duration = 3f; 
+		float duration = 1f; 
 		float time = 0;
 		Vector3 startPosition = player.transform.position;
 		Quaternion startRotation = player.transform.rotation;
