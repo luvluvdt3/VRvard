@@ -7,13 +7,18 @@ using System.Collections.Generic;
 public class PanelManager : MonoBehaviour {
 
 	public Animator initiallyOpen;
-
+	public GameObject player;
+	public Vector3 destination;
+	public Quaternion rotation;
+	
 	private int m_OpenParameterId;
 	private Animator m_Open;
 	private GameObject m_PreviouslySelected;
 	
 	const string k_OpenTransitionName = "Open";
 	const string k_ClosedStateName = "Closed";
+	
+	
 
 	public void OnEnable()
 	{
@@ -99,9 +104,25 @@ public class PanelManager : MonoBehaviour {
 		Application.Quit();
 	}
 	
-	public void MovePlayer(GameObject player, Vector3 destination)
+	public void MovePlayer()
 	{
-		
+		StartCoroutine(MovePlayerCoroutine(player, destination, rotation));
+	}
+	
+	IEnumerator MovePlayerCoroutine(GameObject player, Vector3 destination, Quaternion rotation)
+	{
+		float time = 0;
+		Vector3 startPosition = player.transform.position;
+		Quaternion startRotation = player.transform.rotation;
+		while (time < 3)
+		{
+			player.transform.position = Vector3.Lerp(startPosition, destination, time);
+			player.transform.rotation = Quaternion.Lerp(startRotation, rotation, time);
+			time += Time.deltaTime;
+			yield return null;
+		}
+		player.transform.position = destination;
+		player.transform.rotation = rotation;
 	}
 	
 }
