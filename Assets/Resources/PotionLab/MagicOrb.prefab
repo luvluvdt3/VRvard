@@ -153,4 +153,4 @@ MonoBehaviour:
     m_Bits: 51
   impact: {fileID: 51007069108641418, guid: bb329092abef3d04d92f04fa91014960, type: 3}
   splashEffect: {fileID: 0}
-  effClass: 0
+  effClass: 2
