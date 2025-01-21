@@ -21,21 +21,20 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: libEstanterias-lomos2_17
-  m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: 9ef6bcacc48faf04ca9eaef455e9381e, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
-  m_ValidKeywords:
+  m_ValidKeywords: []
+  m_InvalidKeywords:
+  - _METALLICGLOSSMAP
   - _METALLICSPECGLOSSMAP
   - _NORMALMAP
   - _OCCLUSIONMAP
-  m_InvalidKeywords:
-  - _METALLICGLOSSMAP
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
-  stringTagMap:
-    RenderType: Opaque
+  stringTagMap: {}
   disabledShaderPasses:
   - MOTIONVECTORS
   m_LockedProperties: 
@@ -44,6 +43,14 @@ Material:
     m_TexEnvs:
     - _BaseMap:
         m_Texture: {fileID: 2800000, guid: 3da9640a37a9cc54fa209e4cb28b8f54, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BlendTextureAlbedo:
+        m_Texture: {fileID: 2800000, guid: df6f118720ebc464e81a84967524c445, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BlendTextureNormal:
+        m_Texture: {fileID: 2800000, guid: 61f900fef30504b4cb8b01421af4ad75, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
@@ -74,8 +81,24 @@ Material:
         m_Texture: {fileID: 2800000, guid: fa9074f1d51a4d34491a38e8eaa8c69b, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _NormalMap:
+        m_Texture: {fileID: 2800000, guid: e74a611ea939e5f42b6183e502cddc53, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
         m_Texture: {fileID: 2800000, guid: d7293e99d9e7eac4ab37126e48a3d656, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OverlayMap:
+        m_Texture: {fileID: 2800000, guid: 3f90940f545202042bfe585a031bda77, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OverrideAlbedo:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OverrideNormalMap:
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ParallaxMap:
@@ -105,6 +128,8 @@ Material:
     - _AlphaToMask: 0
     - _Blend: 0
     - _BlendModePreserveSpecular: 1
+    - _BlendTextureLerpT: 0
+    - _BlendTextureNormalStrength: 4
     - _BumpScale: 1
     - _ClearCoatMask: 0
     - _ClearCoatSmoothness: 0
@@ -112,16 +137,35 @@ Material:
     - _Cutoff: 0.5
     - _DetailAlbedoMapScale: 1
     - _DetailNormalMapScale: 1
+    - _DissolveEdgeWidth: 0
+    - _DissolveSpread: 0
     - _DstBlend: 0
     - _DstBlendAlpha: 0
+    - _EffectSpread: 0
+    - _EmissionStrength: 0
     - _EnvironmentReflections: 1
     - _GlossMapScale: 1
     - _Glossiness: 0
     - _GlossyReflections: 1
+    - _IsMagioShader: 1
+    - _LifelineMultiplier: 1
+    - _MaterialAlpha: 1
     - _Metallic: 0
     - _Mode: 0
+    - _NormalStrength: 1
+    - _NullifySpread: 0
+    - _NullifyTextureOverlaySpread: 0
     - _OcclusionStrength: 1
+    - _OverlayBrightness: 0
+    - _OverlayHorizontalMultiplier: 0.3
+    - _OverlayMaximumBrightness: 10
+    - _OverlayMinimumBrightness: 0
+    - _OverlayMoveMultiplier: 1
+    - _OverlaySoftness: 0.5
+    - _OverrideAddWetness: 0
+    - _OverrideStrength: 1
     - _Parallax: 0.02
+    - _QueueControl: 0
     - _QueueOffset: 0
     - _ReceiveShadows: 1
     - _Smoothness: 1
@@ -130,13 +174,33 @@ Material:
     - _SrcBlend: 1
     - _SrcBlendAlpha: 1
     - _Surface: 0
+    - _TextureOverlaySpread: 0
     - _UVSec: 0
+    - _UseDissolve: 0
+    - _UseOverlay: 0
+    - _UseTextureOverride: 0
+    - _VoronoiMove: 10
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
+    - _BlendTextureTiling: {r: 0.2, g: 0.2, b: 0, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _DissolveOrigin: {r: 0, g: 0, b: 0, a: 0}
+    - _EffectOrigin: {r: 0, g: 0, b: 0, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _NullifyOrigin: {r: 0, g: 0, b: 0, a: 0}
+    - _NullifyTextureOverlayOrigin: {r: 0, g: 0, b: 0, a: 0}
+    - _Offset: {r: 0, g: 0, b: 0, a: 0}
+    - _OverlayColor: {r: 0.9433962, g: 0.4731304, b: 0.044499785, a: 0}
+    - _OverlayDirection: {r: 0, g: 1, b: 0, a: 0}
+    - _OverlayMoveDirection: {r: 0, g: -0.001, b: 0, a: 0}
+    - _OverlayTiling: {r: 1, g: 1, b: 0, a: 0}
+    - _OverrideColor: {r: 1, g: 1, b: 1, a: 0}
+    - _OverrideOffset: {r: 0, g: 0, b: 0, a: 0}
+    - _OverrideTiling: {r: 0, g: 0, b: 0, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
+    - _TextureOverlayOrigin: {r: 0, g: 0, b: 0, a: 0}
+    - _Tiling: {r: 1, g: 1, b: 0, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
