@@ -1,0 +1,11 @@
+Model Information:
+* title:	Environment - Library
+* source:	https://sketchfab.com/3d-models/environment-library-26c53ed3f9a84256a45607917c63c321
+* author:	anaroeto (https://sketchfab.com/anaroeto)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Environment - Library" (https://sketchfab.com/3d-models/environment-library-26c53ed3f9a84256a45607917c63c321) by anaroeto (https://sketchfab.com/anaroeto) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

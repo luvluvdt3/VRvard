@@ -1,0 +1,11 @@
+Model Information:
+* title:	Stylized Plants
+* source:	https://sketchfab.com/3d-models/stylized-plants-b74f2f87fe4c413f8e24560e8209844d
+* author:	chris_warstat (https://sketchfab.com/chris_warstat)
+
+Model License:
+* license type:	CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)
+* requirements:	Author must be credited. No commercial use.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Stylized Plants" (https://sketchfab.com/3d-models/stylized-plants-b74f2f87fe4c413f8e24560e8209844d) by chris_warstat (https://sketchfab.com/chris_warstat) licensed under CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)

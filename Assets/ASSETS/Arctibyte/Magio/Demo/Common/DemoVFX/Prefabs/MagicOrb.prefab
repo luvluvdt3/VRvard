@@ -27,12 +27,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6874935449070955693}
+  serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.9998916, z: -0, w: 0.014728796}
   m_LocalPosition: {x: 3.883, y: 2.03, z: -57.562}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -1261.688, z: 0}
 --- !u!2083052967 &6874935449070955691
 VisualEffect:
@@ -47,6 +48,7 @@ VisualEffect:
   m_InitialEventNameOverriden: 0
   m_StartSeed: 0
   m_ResetSeedOnPlay: 1
+  m_AllowInstancing: 1
   m_ResourceVersion: 1
   m_PropertySheet:
     m_Float:
@@ -76,6 +78,7 @@ VisualEffect:
       m_Array: []
 --- !u!73398921 &6874935449070955692
 VFXRenderer:
+  serializedVersion: 1
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -91,12 +94,11 @@ VFXRenderer:
   m_ReflectionProbeUsage: 0
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 257
   m_RendererPriority: 1
-  m_Materials:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -148,7 +150,7 @@ MonoBehaviour:
   innerColor: {r: 0, g: 0, b: 0, a: 0}
   mask:
     serializedVersion: 2
-    m_Bits: 819
+    m_Bits: 51
   impact: {fileID: 51007069108641418, guid: bb329092abef3d04d92f04fa91014960, type: 3}
   splashEffect: {fileID: 0}
   effClass: 0
