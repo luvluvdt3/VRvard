@@ -1708,7 +1708,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 797947033}
     m_Modifications:
     - target: {fileID: 151087356047159277, guid: 34f60038cbdc1bc4cbcf03f80d58de66, type: 3}
       propertyPath: m_Convex
@@ -1764,15 +1764,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5143798968067697845, guid: 34f60038cbdc1bc4cbcf03f80d58de66, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.954999
+      value: -30.747513
       objectReference: {fileID: 0}
     - target: {fileID: 5143798968067697845, guid: 34f60038cbdc1bc4cbcf03f80d58de66, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.45700002
+      value: -12.236815
       objectReference: {fileID: 0}
     - target: {fileID: 5143798968067697845, guid: 34f60038cbdc1bc4cbcf03f80d58de66, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -35.033127
+      value: 4.7497864
       objectReference: {fileID: 0}
     - target: {fileID: 5143798968067697845, guid: 34f60038cbdc1bc4cbcf03f80d58de66, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1907,6 +1907,11 @@ MonoBehaviour:
   BadPotionPrefab: {fileID: 6118406163021092178, guid: 26f6feb3a7b13d34497d0c6db32e037d, type: 3}
   SpawnerCorrect: {fileID: 58296134}
   SpawnerIncorrect: {fileID: 58296133}
+--- !u!4 &58296136 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5143798968067697845, guid: 34f60038cbdc1bc4cbcf03f80d58de66, type: 3}
+  m_PrefabInstance: {fileID: 58296127}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &58489885
 GameObject:
   m_ObjectHideFlags: 0
@@ -24782,6 +24787,8 @@ Transform:
   - {fileID: 126181011}
   - {fileID: 798957540}
   - {fileID: 779179742}
+  - {fileID: 1460425842}
+  - {fileID: 58296136}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &798093180
@@ -43461,13 +43468,13 @@ Transform:
   m_GameObject: {fileID: 1460425841}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.078, y: 18.99, z: 27.000002}
+  m_LocalPosition: {x: -19.714516, y: 6.2961845, z: 66.78291}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1633195443}
   - {fileID: 379315837}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 797947033}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1462745957
 PrefabInstance:
@@ -59036,5 +59043,3 @@ SceneRoots:
   - {fileID: 881064402}
   - {fileID: 1999545276}
   - {fileID: 48564492}
-  - {fileID: 58296127}
-  - {fileID: 1460425842}
