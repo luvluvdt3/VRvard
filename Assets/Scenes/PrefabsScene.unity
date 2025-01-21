@@ -2300,7 +2300,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b660c42f1464564e8ad4e0cb5f74796, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Prefab: {fileID: 7873050006380993127, guid: e8a81499b8817984abee6acfc738cf22, type: 3}
+  Prefab: {fileID: 6118406163021092178, guid: 26f6feb3a7b13d34497d0c6db32e037d, type: 3}
   SpawnEffect: {fileID: 1079610690}
   SpawnPoint: {fileID: 1297432234}
 --- !u!114 &58296134
@@ -2331,7 +2331,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PotionPrefab: {fileID: 7873050006380993127, guid: e8a81499b8817984abee6acfc738cf22, type: 3}
-  BadPotionPrefab: {fileID: 7873050006380993127, guid: e8a81499b8817984abee6acfc738cf22, type: 3}
+  BadPotionPrefab: {fileID: 6118406163021092178, guid: 26f6feb3a7b13d34497d0c6db32e037d, type: 3}
   SpawnerCorrect: {fileID: 58296134}
   SpawnerIncorrect: {fileID: 58296133}
 --- !u!1 &59065862
