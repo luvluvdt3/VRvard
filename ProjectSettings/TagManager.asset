@@ -3,20 +3,21 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags: []
+  tags:
+  - Water
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - HiddenMesh
   - Water
   - UI
   - Ignore Mirror
   - Key
   - 
   - 
-  - 
-  - 
+  - Character
+  - MirroredCharacter
   - 
   - 
   - 
