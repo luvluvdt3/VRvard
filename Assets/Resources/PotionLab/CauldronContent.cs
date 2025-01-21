@@ -76,12 +76,12 @@ public class CauldronContent : MonoBehaviour
 
         SplashEffect.transform.position = contactPosition;
 
-        SFXPlayer.Instance.PlaySFX(SplashClips[Random.Range(0, SplashClips.Length)], contactPosition, new SFXPlayer.PlayParameters()
-        {
-            Pitch = Random.Range(0.8f, 1.2f),
-            SourceID = 17624,
-            Volume = 1.0f
-        }, 0.2f, true);
+        //SFXPlayer.Instance.PlaySFX(SplashClips[Random.Range(0, SplashClips.Length)], contactPosition, new SFXPlayer.PlayParameters()
+        // {
+        //     Pitch = Random.Range(0.8f, 1.2f),
+        //     SourceID = 17624,
+        //     Volume = 1.0f
+        // }, 0.2f, true);
 
         splashVFX.Play();
 
@@ -110,7 +110,7 @@ public class CauldronContent : MonoBehaviour
     public void ChangeTemperature(float step)
     {
         Debug.Log("ChangeTemp" + step*105);
-        m_Temperature = TemperatureIncrement * step * 105;
+        m_Temperature = step * 105;
         m_CauldronEffect.SetBubbleIntensity((int)step);
     }
 
@@ -127,6 +127,8 @@ public class CauldronContent : MonoBehaviour
 
     public void Brew()
     {
+        
+        
         if (!m_CanBrew)
             return;
 
@@ -136,15 +138,21 @@ public class CauldronContent : MonoBehaviour
         Recipe recipeBewed = null;
         foreach (Recipe recipe in Recipes)
         {
+            Debug.Log("Checking recipe: " + recipe.name);
+            Debug.Log("Temperature: " + recipe.temperature + " Rotation: " + recipe.rotation);
+            Debug.Log("expected Temperature: " + m_Temperature + " expected Rotation: " + m_Rotation);
             if (recipe.temperature != m_Temperature || recipe.rotation != m_Rotation)
                 continue;
 
             List<string> copyOfIngredient = new List<string>(m_CurrentIngredientsIn);
+            Debug.Log ("Recipe: " + recipe.name);
             float ingredientCount = 0;
             foreach (var ing in recipe.ingredients)
             {
+                Debug.Log("Ingredient: " + ing);
                 if (copyOfIngredient.Contains(ing))
                 {
+                    
                     ingredientCount += 1;
                     copyOfIngredient.Remove(ing);
                 }
