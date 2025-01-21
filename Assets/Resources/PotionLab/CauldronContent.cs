@@ -52,11 +52,12 @@ public class CauldronContent : MonoBehaviour
     float m_StartingVolume;
 
     private CauldronEffects m_CauldronEffect;
+    private AudioSource m_AudioSource;
 
     private void Start()
     {
         splashVFX = SplashEffect.GetComponent<VisualEffect>();
-
+        m_AudioSource = GetComponent<AudioSource>();
         m_StartingVolume = AmbientSoundSource.volume;
         AmbientSoundSource.volume = m_StartingVolume * 0.2f;
     }
@@ -75,6 +76,8 @@ public class CauldronContent : MonoBehaviour
         contactPosition.y = gameObject.transform.position.y;
 
         SplashEffect.transform.position = contactPosition;
+        
+        m_AudioSource.Play();
 
         //SFXPlayer.Instance.PlaySFX(SplashClips[Random.Range(0, SplashClips.Length)], contactPosition, new SFXPlayer.PlayParameters()
         // {
