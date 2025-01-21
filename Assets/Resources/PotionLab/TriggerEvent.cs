@@ -14,6 +14,7 @@ public class TriggerEvent : MonoBehaviour
         if(other.gameObject.name == objectName)
         {
             eventToInvoke.Invoke();
+            Destroy(other.gameObject);
         }
     }
 }
