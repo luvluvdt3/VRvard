@@ -174,19 +174,19 @@ MonoBehaviour:
       cellProbeOcclusionDataAsset:
         m_AssetGUID: 480b007234549884895d6ec9361b7dbe
         m_StreamableAssetPath: APVStreamingAssets\7a8e9de940c6bdc4fb63e00215658a3c\480b007234549884895d6ec9361b7dbe.bytes
-        m_ElementSize: 0
+        m_ElementSize: 32768
         m_StreamableCellDescs:
           m_Keys: 030000000c00000001000000040000000d000000
           m_Values:
           - offset: 0
             elementCount: 15
-          - offset: 0
+          - offset: 491520
             elementCount: 13
-          - offset: 0
+          - offset: 917504
             elementCount: 1
-          - offset: 0
+          - offset: 950272
             elementCount: 40
-          - offset: 0
+          - offset: 2260992
             elementCount: 33
         m_Asset: {fileID: 0}
   cellBricksDataAsset:
@@ -233,7 +233,7 @@ MonoBehaviour:
     m_Extent: {x: 40.5, y: 40.5, z: 40.5}
   bakedSimplificationLevels: 3
   bakedMinDistanceBetweenProbes: 0.5
-  bakedProbeOcclusion: 0
+  bakedProbeOcclusion: 1
   bakedSkyOcclusionValue: 0
   bakedSkyShadingDirectionValue: 0
   bakedProbeOffset: {x: 0, y: 0, z: 0}
@@ -247,7 +247,7 @@ MonoBehaviour:
   L0ChunkSize: 65536
   L1ChunkSize: 32768
   L2TextureChunkSize: 32768
-  ProbeOcclusionChunkSize: 0
+  ProbeOcclusionChunkSize: 32768
   sharedValidityMaskChunkSize: 8192
   sharedSkyOcclusionL0L1ChunkSize: 0
   sharedSkyShadingDirectionIndicesChunkSize: 0
