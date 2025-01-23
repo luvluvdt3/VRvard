@@ -18,6 +18,7 @@ EditorBuildSettings:
     path: Assets/Scenes/PrefabsScene.unity
     guid: b63835ef700e6ab42b43d6842de9dd2c
   m_configObjects:
+    Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 6f5fbbd04257f134b93e9789f27a62ad, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 80c0bcc51163f4b42806da0ec6356877, type: 2}
     com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 22dfd5ac9a3d09f4fb80884905e68b5d, type: 2}
