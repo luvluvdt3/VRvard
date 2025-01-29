@@ -1,4 +1,4 @@
-# 🎩✨ VRvard ✨🎩  
+<h1 align="center"> 🎩✨ VRvard ✨🎩  </h1>
 <p align="center">
   Welcome to our world of magic with <b>VRvard</b>!  
   VRvard is a virtual reality experience that takes you to a magical world where you can interact with objects and solve the mystery of magic.
