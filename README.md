@@ -9,7 +9,7 @@
 [![Our demo video](https://raw.githubusercontent.com/luvluvdt3/VRvard/develop/docs/thumbnail.png)](https://raw.githubusercontent.com/luvluvdt3/VRvard/develop/docs/FINAL_VR.mp4)
 
 ## Documentation
-Please find our presentation slides [here](docs/VRvard_Presentation.pdf)
+Please find our presentation slides [here](https://github.com/luvluvdt3/VRvard/blob/develop/docs/VRvardDiapo.pdf)
 ## 📦 Assets & Models Used  
 
 ### 🛠 Unity & XR Tools  
