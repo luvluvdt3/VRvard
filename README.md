@@ -6,7 +6,7 @@
 
 ---
 ## Demo
-[![Our demo video]([https://raw.githubusercontent.com/luvluvdt3/VRvard/tree/develop/docs/](https://raw.githubusercontent.com/luvluvdt3/VRvard/develop/docs/)thumbnail.png)]([https://raw.githubusercontent.com/luvluvdt3/VRvard/tree/develop/docs/FINAL_VR.mp4](https://raw.githubusercontent.com/luvluvdt3/VRvard/develop/docs/FINAL_VR.mp4))
+[![Our demo video](https://raw.githubusercontent.com/luvluvdt3/VRvard/develop/docs/thumbnail.png)](https://raw.githubusercontent.com/luvluvdt3/VRvard/develop/docs/FINAL_VR.mp4)
 
 ## Documentation
 Please find our presentation slides [here](\docs\VRvard_Presentation.pdf)
